@@ -55,16 +55,25 @@ choco install azure-cli
 choco install winscp.install
 choco install sql-server-management-studio
 choco install microsoft-teams
+choco install azure-functions-core-tools
+choco install dotpeek
+choco install postman
 
 # Install nice to haves using choco
 choco install lightshot
 choco install keeweb
 choco install spotify
-chooc install plexmediaplayer
+choco install plexmediaplayer
+choco install telegram.install
+choco install whatsapp
+
 
 #stuff that has to be installed through powershell
 InstallPowerlineFonts
 InstallAndConfigureOhMyPosh
+
+#Section for stuff that can't be scripted but shouldn't be forgotten
+# CodeSys3
 
 
 #set the global confirmation flag to disable
