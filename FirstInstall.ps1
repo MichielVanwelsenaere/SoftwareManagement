@@ -14,7 +14,8 @@ function CheckIfChocoInstalled {
 }
 
 function InstallChoco {
-    Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+Set-ExecutionPolicy Bypass -Scope Process -Force; `
+  iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 }
 
 # docs here: https://gist.github.com/jchandra74/5b0c94385175c7a8d1cb39bc5157365e
@@ -31,12 +32,19 @@ function InstallAndConfigureOhMyPosh {
     Set-Theme agnoster
 }
 
-# Check if Chocolatey is installed, otherwise install it
-CheckIfRunAsAdmin
-if (CheckIfChocoInstalled -eq $false){
-    InstallChoco
-    choco install chocolatey
+#Main-function
+function main {
+    # Check if Chocolatey is installed, otherwise install it
+    CheckIfRunAsAdmin
+    $ChocoInstalled = CheckIfChocoInstalled
+    if ($ChocoInstalled -eq $false){
+        InstallChoco
+        choco install chocolatey
+    }
 }
+
+#Entry point
+main
 
 #set the global confirmation flag to enable
 choco feature enable -n allowGlobalConfirmation
