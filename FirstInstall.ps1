@@ -27,6 +27,7 @@ function InstallAndConfigureOhMyPosh {
 # Check if Chocolatey is installed, otherwise install it
 if (CheckIfChocoInstalled -eq $false){
     InstallChoco
+    choco install chocolatey
 }
 #set the global confirmation flag to enable
 choco feature enable -n allowGlobalConfirmation
