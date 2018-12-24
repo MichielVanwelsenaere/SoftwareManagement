@@ -1,3 +1,10 @@
+function CheckIfRunAsAdmin{
+    $admin = [bool](([System.Security.Principal.WindowsIdentity]::GetCurrent()).groups -match "S-1-5-32-544")
+    if($admin -eq $false){
+        throw "script should be run as admin!"
+    }
+}
+
 function CheckIfChocoInstalled {
     $ChocoInstalled = $false
     if (Get-Command choco.exe -ErrorAction SilentlyContinue) {
@@ -25,10 +32,12 @@ function InstallAndConfigureOhMyPosh {
 }
 
 # Check if Chocolatey is installed, otherwise install it
+CheckIfRunAsAdmin
 if (CheckIfChocoInstalled -eq $false){
     InstallChoco
     choco install chocolatey
 }
+
 #set the global confirmation flag to enable
 choco feature enable -n allowGlobalConfirmation
 
