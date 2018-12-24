@@ -27,9 +27,15 @@ function InstallPowerlineFonts {
 
 function InstallAndConfigureOhMyPosh {
     Install-Module -Name 'oh-my-posh'
+    Install-Module -Name 'posh-git'
     Import-Module 'posh-git'
     Import-Module 'oh-my-posh'
     Set-Theme agnoster
+}
+
+function InstallPowerShellNugetPackageProvider {
+    Install-PackageProvider -Name NuGet -MinimumVersion '2.8.5.201' -Force
+    Import-PackageProvider -Name NuGet -MinimumVersion '2.8.5.201'
 }
 
 #Main-function
@@ -84,14 +90,18 @@ choco install plexmediaplayer
 choco install telegram.install
 choco install whatsapp
 
+#as some of the custom install scripts might need environment variables/path stuff that just has been installed
+refreshenv
+$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine")
 
 #stuff that has to be installed through powershell
+Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
+InstallPowerShellNugetPackageProvider
 InstallPowerlineFonts
 InstallAndConfigureOhMyPosh
 
 #Section for stuff that can't be scripted but shouldn't be forgotten
 # CodeSys3
-
 
 #set the global confirmation flag to disable
 choco feature disable -n allowGlobalConfirmation
