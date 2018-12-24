@@ -10,6 +10,20 @@ function InstallChoco {
     Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 }
 
+# docs here: https://gist.github.com/jchandra74/5b0c94385175c7a8d1cb39bc5157365e
+function InstallPowerlineFonts {
+    git clone https://github.com/powerline/fonts.git
+    cd fonts
+    .\install.ps1
+}
+
+function InstallAndConfigureOhMyPosh {
+    Install-Module -Name 'oh-my-posh'
+    Import-Module 'posh-git'
+    Import-Module 'oh-my-posh'
+    Set-Theme agnoster
+}
+
 # Check if Chocolatey is installed, otherwise install it
 if (CheckIfChocoInstalled -eq $false){
     InstallChoco
@@ -45,6 +59,11 @@ choco install microsoft-teams
 choco install lightshot
 choco install keeweb
 choco install spotify
+
+#stuff that has to be installed through powershell
+InstallPowerlineFonts
+InstallAndConfigureOhMyPosh
+
 
 #set the global confirmation flag to disable
 choco feature disable -n allowGlobalConfirmation
