@@ -59,6 +59,7 @@ choco install microsoft-teams
 choco install lightshot
 choco install keeweb
 choco install spotify
+chooc install plexmediaplayer
 
 #stuff that has to be installed through powershell
 InstallPowerlineFonts
