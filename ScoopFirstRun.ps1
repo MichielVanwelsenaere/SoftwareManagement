@@ -53,3 +53,4 @@ scoop install slack
 # Spotify
 # GoogleChrome
 # office365proplus
+# SoapUi
