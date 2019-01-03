@@ -1,0 +1,35 @@
+{
+    "homepage": "https://winscp.net",
+    "description": "A Free SFTP, SCP and FTP client for Windows",
+    "license": {
+        "identifier": "GPL-3.0-or-later",
+        "url": "https://winscp.net/eng/docs/license"
+    },
+    "version": "5.13",
+    "architecture": {
+        "32bit": {
+            "url": "https://winscp.net/download/WinSCP-5.13.6-Setup.exe",
+            "hash": "c3bb2b15d14191e52ec61ef5cbfa594be88325d869986eb7d7e481d6569bcd2a"
+        }
+    },
+    "extract_dir": "Files/7-Zip",
+    "bin": "7z.exe",
+    "checkver": {
+        "url": "https://winscp.net/eng/downloads.php",
+        "regex": "Download WinSCP ([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://winscp.net/download/WinSCP-$version-Setup.exe",
+        "hash": {
+            "url": "https://winscp.net/download/WinSCP-$version-Setup.exe#checksums",
+            "find": "SHA-256:\\s+([a-fA-F0-9]{64})"
+        },
+        "extract_dir": "WinSCP-$version"
+    },
+    "shortcuts": [
+        [
+            "7zFM.exe",
+            "7-Zip"
+        ]
+    ]
+}
