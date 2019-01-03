@@ -4,6 +4,8 @@ function InstallScoop{
     iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
 }
 
+#Set the execution policy so scoop can be installed
+Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 
 #Will do nothing is Scoop is already installed
 InstallScoop
