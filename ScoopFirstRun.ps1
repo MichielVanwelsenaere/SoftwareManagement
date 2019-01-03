@@ -11,6 +11,9 @@ InstallScoop
 #Install the extras backup
 scoop bucket add extras
 
+# Install aria2 to use multi-connection downloads
+scoop install aria2
+
 # Install essentials using Scoop
 scoop install cmder-full
 scoop install git
