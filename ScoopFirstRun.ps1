@@ -34,11 +34,12 @@ scoop install storageexplorer
 scoop install azure-ps
 scoop install servicebusexplorer
 scoop install azure-cli
-# scoop install winscp.install
+scoop install winscp
 # scoop install sql-server-management-studio
 scoop install azure-functions-core-tools
 scoop install ilspy
 scoop install postman
+scoop install soapui
 
 # Install nice to haves using Scoop
 scoop install lightshot
@@ -55,4 +56,3 @@ scoop install slack
 # Spotify
 # GoogleChrome
 # office365proplus
-# SoapUi
