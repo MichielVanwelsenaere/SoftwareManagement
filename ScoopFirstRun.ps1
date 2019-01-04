@@ -4,11 +4,21 @@ function InstallScoop{
     iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
 }
 
+function CheckIfScoopInstalled {
+    $ScoopInstalled = $false
+    if (Get-Command 'scoop' -ErrorAction SilentlyContinue) {
+        $ScoopInstalled = $true
+    }
+    return $ScoopInstalled
+}
+
 #Set the execution policy so scoop can be installed
 Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 
 #Will do nothing is Scoop is already installed
-InstallScoop
+if(!CheckIfScoopInstalled){
+    InstallScoop
+}
 
 #Install the extras backup
 scoop bucket add extras
