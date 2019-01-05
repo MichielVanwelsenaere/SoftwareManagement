@@ -20,8 +20,9 @@ if(!CheckIfScoopInstalled){
     InstallScoop
 }
 
-#Install the extras backup
+#Install some extras buckets
 scoop bucket add extras
+scoop bucket add Ash258 'https://github.com/Ash258/scoop-Ash258.git'
 
 # Install aria2 to use multi-connection downloads
 scoop install aria2
@@ -47,9 +48,10 @@ scoop install azure-cli
 scoop install winscp
 # scoop install sql-server-management-studio
 scoop install azure-functions-core-tools
-scoop install ilspy
+scoop install dotpeek
 scoop install postman
 scoop install soapui
+scoop install Chrome
 
 # Install nice to haves using Scoop
 scoop install lightshot
@@ -64,5 +66,4 @@ scoop install slack
 # Software not downloadable with Scoop but that shouldn't be forgotten
 # plexmediaplayer
 # Spotify
-# GoogleChrome
 # office365proplus
