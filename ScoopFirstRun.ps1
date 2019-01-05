@@ -21,8 +21,12 @@ Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 
 
 # Will do nothing is Scoop is already installed
-if(!CheckIfScoopInstalled){
+if(-Not (CheckIfScoopInstalled)){
+    Write-Host "Scoop not yet installed, installing now.."
     InstallScoop
+}
+else{
+    Write-Host "Scoop already installed"
 }
 
 #Install some extras buckets
