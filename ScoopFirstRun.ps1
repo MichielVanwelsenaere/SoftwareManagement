@@ -51,6 +51,7 @@ scoop install azure-functions-core-tools
 scoop install dotpeek
 scoop install postman
 scoop install soapui
+scoop install wireshark
 scoop install Chrome
 
 # Install nice to haves using Scoop
