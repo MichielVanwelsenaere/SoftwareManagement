@@ -10,3 +10,12 @@ function ConfigureOhMyPosh {
     Import-Module 'oh-my-posh'
     Set-Theme agnoster
 }
+
+function InstallVsCodeExtensions{
+    code --install-extension peterjausovec.vscode-docker
+    code --install-extension eamodio.gitlens
+    code --install-extension robertohuertasm.vscode-icons
+    code --install-extension ms-vscode.csharp
+    code --install-extension ms-vscode.powershell
+    code --install-extension ms-vscode.csharp
+}
