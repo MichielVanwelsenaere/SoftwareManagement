@@ -4,14 +4,25 @@ function InstallScoop{
     iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
 }
 
+function CheckIfScoopInstalled {
+    $ScoopInstalled = $false
+    if (Get-Command 'scoop' -ErrorAction SilentlyContinue) {
+        $ScoopInstalled = $true
+    }
+    return $ScoopInstalled
+}
+
 #Set the execution policy so scoop can be installed
 Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 
 #Will do nothing is Scoop is already installed
-InstallScoop
+if(!CheckIfScoopInstalled){
+    InstallScoop
+}
 
-#Install the extras backup
+#Install some extras buckets
 scoop bucket add extras
+scoop bucket add Ash258 'https://github.com/Ash258/scoop-Ash258.git'
 
 # Install aria2 to use multi-connection downloads
 scoop install aria2
@@ -34,11 +45,14 @@ scoop install storageexplorer
 scoop install azure-ps
 scoop install servicebusexplorer
 scoop install azure-cli
-# scoop install winscp.install
+scoop install winscp
 # scoop install sql-server-management-studio
 scoop install azure-functions-core-tools
-scoop install ilspy
+scoop install dotpeek
 scoop install postman
+scoop install soapui
+scoop install wireshark
+scoop install Chrome
 
 # Install nice to haves using Scoop
 scoop install lightshot
@@ -53,6 +67,4 @@ scoop install slack
 # Software not downloadable with Scoop but that shouldn't be forgotten
 # plexmediaplayer
 # Spotify
-# GoogleChrome
 # office365proplus
-# SoapUi
