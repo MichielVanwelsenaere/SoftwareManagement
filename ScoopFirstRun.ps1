@@ -13,7 +13,7 @@ function CheckIfScoopInstalled {
 }
 
 # Set the execution policy so scoop can be installed
-Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 
 # Load libraries
 . .\Lib\ConfigureSoftware.ps1
@@ -29,6 +29,9 @@ else{
     Write-Host "Scoop already installed"
 }
 
+# Install git first so we can add other buckets
+scoop install git
+
 #Install some extras buckets
 scoop bucket add extras
 scoop bucket add Ash258 'https://github.com/Ash258/scoop-Ash258.git'
@@ -38,7 +41,6 @@ scoop install aria2
 
 # Install essentials using Scoop
 scoop install cmder-full
-scoop install git
 scoop install oh-my-posh
 scoop install vscode
 scoop install dotnet-sdk
