@@ -7,8 +7,8 @@ function InstallPowerlineFonts {
 
 function ConfigureOhMyPosh {
     sudo Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
-    Import-Module 'posh-git'
-    Import-Module 'oh-my-posh'
+    Import-Module posh-git -Force
+    Import-Module oh-my-posh -Force
     Set-Theme agnoster
 }
 
