@@ -41,6 +41,7 @@ scoop install aria2
 
 # Install essentials using Scoop
 scoop install cmder-full
+scoop install sudo
 scoop install oh-my-posh
 scoop install openssh
 [environment]::setenvironmentvariable('GIT_SSH', (resolve-path (scoop which ssh)), 'USER')
