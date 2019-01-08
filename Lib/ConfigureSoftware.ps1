@@ -19,4 +19,5 @@ function InstallVsCodeExtensions{
     code --install-extension ms-vscode.csharp
     code --install-extension ms-vscode.powershell
     code --install-extension ms-vscode.csharp
+    code --install-extension dotjoshjohnson.xml
 }
