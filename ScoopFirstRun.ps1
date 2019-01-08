@@ -78,6 +78,7 @@ scoop install slack
 # visualstudio2017enterprise
 # sql-server-management-studio
 # CodeSys3
+# DanSharpXmlViewer
 
 # Configure Windows 10
 ClearStart
