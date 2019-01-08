@@ -60,6 +60,9 @@ scoop install postman
 scoop install soapui
 scoop install wireshark
 scoop install Chrome
+scoop install pwsh
+scoop install notepadplusplus
+scoop install notepadplusplus-pm
 
 # Install nice to haves using Scoop
 scoop install lightshot
