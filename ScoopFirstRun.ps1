@@ -63,6 +63,8 @@ scoop install Chrome
 scoop install pwsh
 scoop install notepadplusplus
 scoop install notepadplusplus-pm
+scoop install SpaceSniffer
+scoop install azuredatastudio
 
 # Install nice to haves using Scoop
 scoop install lightshot
