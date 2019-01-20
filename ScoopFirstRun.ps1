@@ -35,7 +35,6 @@ scoop install git
 #Install some extras buckets
 scoop bucket add extras
 scoop bucket add Ash258 'https://github.com/Ash258/scoop-Ash258.git'
-scoop bucket add java
 
 # Install aria2 to use multi-connection downloads
 scoop install aria2
@@ -66,8 +65,6 @@ scoop install notepadplusplus
 scoop install notepadplusplus-pm
 scoop install SpaceSniffer
 scoop install azuredatastudio
-scoop install oraclejre8
-scoop install ipscan
 
 # Install nice to haves using Scoop
 scoop install lightshot
