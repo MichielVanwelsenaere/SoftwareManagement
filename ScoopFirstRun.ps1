@@ -67,6 +67,7 @@ scoop install SpaceSniffer
 scoop install azuredatastudio
 scoop install nmap
 scoop install bfg
+scoop install station
 
 # Install nice to haves using Scoop
 scoop install lightshot
