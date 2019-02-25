@@ -62,7 +62,6 @@ scoop install wireshark
 scoop install Chrome
 scoop install pwsh
 scoop install notepadplusplus
-scoop install notepadplusplus-pm
 scoop install SpaceSniffer
 scoop install azuredatastudio
 scoop install nmap
