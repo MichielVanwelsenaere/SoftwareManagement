@@ -1,6 +1,6 @@
 # Software management
 
-Get your software working stack installed **and managed** in a breeze.
+Get your software stack installed **and managed** in a breeze.
 
 # How?
 
