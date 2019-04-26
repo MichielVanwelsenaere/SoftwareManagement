@@ -4,7 +4,7 @@ function ClearStart{
 }
 
 function ClearDesktop{
-    #Remove the desktop icons just made by the choco installations
+    #Remove any desktop icons
     $DesktopPath = [Environment]::GetFolderPath("Desktop")
     Get-ChildItem -Path $DesktopPath -Include *.* -File -Recurse | foreach { $_.Delete()}
     $DesktopPath = [Environment]::GetFolderPath("CommonDesktopDirectory")
