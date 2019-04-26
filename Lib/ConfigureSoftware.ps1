@@ -21,4 +21,5 @@ function InstallVsCodeExtensions{
     code --install-extension ms-vscode.csharp
     code --install-extension dotjoshjohnson.xml
     code --install-extension ms-azuretools.vscode-logicapps
+    code --install-extension mitchdenny.ecdc
 }
