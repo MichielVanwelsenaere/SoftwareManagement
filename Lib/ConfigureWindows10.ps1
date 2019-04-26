@@ -22,3 +22,8 @@ function ConfigureFileExplorer{
     Write-Host "Restarting explorer shell to apply registry changes"
     Stop-Process -processname explorer
 }
+
+function ConfigureKeyBoard{
+    #Set the keyboard to Belgium Azerty
+    Set-WinUserLanguageList -LanguageList nl-BE -Force
+}
