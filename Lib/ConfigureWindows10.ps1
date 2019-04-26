@@ -27,3 +27,7 @@ function ConfigureKeyBoard{
     #Set the keyboard to Belgium Azerty
     Set-WinUserLanguageList -LanguageList nl-BE -Force
 }
+
+function ConfigureUILanguage{
+    Set-WinUILanguageOverride -Language en-US
+}
