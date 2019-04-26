@@ -92,10 +92,10 @@ scoop install kodi
 ClearStart
 ClearDesktop
 ConfigureFileExplorer
+ConfigureKeyBoard
+ConfigureUILanguage
 
 # Configure installed software
 ConfigureOhMyPosh
 InstallVsCodeExtensions
 InstallPowerlineFonts
-ConfigureKeyBoard
-ConfigureUILanguage
