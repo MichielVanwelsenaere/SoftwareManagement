@@ -74,3 +74,14 @@ reset to the latest version using:
 ```ps
 λ  scoop uninstall postman
 ```
+
+### Remove all downloaded files
+removes installers, zips, etc downloaded to install software
+```ps
+λ  scoop cache rm *
+```
+
+### Remove older versions software
+```ps
+λ  scoop cleanup *
+```
