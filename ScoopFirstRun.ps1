@@ -97,3 +97,5 @@ ConfigureFileExplorer
 ConfigureOhMyPosh
 InstallVsCodeExtensions
 InstallPowerlineFonts
+ConfigureKeyBoard
+ConfigureUILanguage
