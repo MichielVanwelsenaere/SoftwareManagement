@@ -29,5 +29,6 @@ function ConfigureKeyBoard{
 }
 
 function ConfigureUILanguage{
+    # Set the windows UI language to US english
     Set-WinUILanguageOverride -Language en-US
 }
