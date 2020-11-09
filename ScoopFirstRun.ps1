@@ -46,7 +46,6 @@ scoop install oh-my-posh
 scoop install openssh
 [environment]::setenvironmentvariable('GIT_SSH', (resolve-path (scoop which ssh)), 'USER')
 scoop install vscode
-scoop install dotnet-sdk
 scoop install docker-compose
 scoop install storageexplorer
 scoop install azure-ps
@@ -56,9 +55,7 @@ scoop install winscp
 scoop install azure-functions-core-tools
 scoop install dotpeek
 scoop install postman
-scoop install soapui
 scoop install wireshark
-scoop install Chrome
 scoop install pwsh
 scoop install SpaceSniffer
 scoop install azuredatastudio
@@ -67,16 +64,11 @@ scoop install bfg
 scoop install firefox
 scoop install greenshot
 scoop install lightshot
-scoop install armclient
-scoop install keeweb
-scoop install slack
 scoop install mqtt-explorer
 scoop install linqpad
 
 # Install nice to haves using Scoop, comment this for work devices
 scoop install station
-scoop install plex-player
-scoop install kodi
 
 # Software not downloadable with Scoop but that might be of interest
 # Docker
