@@ -66,6 +66,10 @@ scoop install greenshot
 scoop install lightshot
 scoop install mqtt-explorer
 scoop install linqpad
+scoop install putty
+scoop install kicad
+scoop install etcher
+scoop install arduino
 
 # Install nice to haves using Scoop, comment this for work devices
 scoop install station
